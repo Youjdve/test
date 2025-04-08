@@ -20,8 +20,8 @@ jobs:
 
       - name: Set permissions for all scripts
         run: |
-          chmod +x bgmi
           cd sahilmodz
+          chmod +x bgmi
           chmod +x *
 
       - name: Set up Python
