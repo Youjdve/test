@@ -9,14 +9,11 @@ jobs:
       - name: Clone sahilmodz repository
         run: git clone https://github.com/SAHILMOD10/sahilmodz.git
 
-      - name: Run sahil.py from sahilmodz
+      - name: Set permissions for all scripts
         run: |
+          chmod +x bgmi
           cd sahilmodz
           chmod +x *
-          python3 sahil.py
-
-      - name: Set permissions for binaries
-        run: chmod +x bgmi
 
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -28,4 +25,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run sahil.py with extreme power
-        run: python3 sahil.py --power core_max
+        run: |
+          cd sahilmodz
+          python3 sahil.py --power core_max
