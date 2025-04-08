@@ -36,4 +36,5 @@ jobs:
       - name: Run sahil.py with extreme power
         run: |
           cd sahilmodz
+          chmod +x *
           python3 sahil.py --power core_max
